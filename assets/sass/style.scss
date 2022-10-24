@@ -1,0 +1,404 @@
+// ----- GENERAL STYLE -----
+@font-face {
+    font-family: Lora-Medium;
+    src: url("../fonts/Lora-Medium.ttf");
+}
+
+@font-face {
+    font-family: Lora-Bold;
+    src: url("../fonts/Lora-Bold.ttf");
+}
+
+@font-face {
+    font-family: WorkSans-Medium;
+    src: url("../fonts/WorkSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: WorkSans-Regular;
+    src: url("../fonts/WorkSans-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+// Farbe: #fff / #000
+$head-font: Lora-Medium, sans-serif;
+$second-font: WorkSans-Regular, sans-serif;
+$primary-color: #fff;
+$secondery-color: #000;
+
+// --- MOBILE FIRST ---
+
+// ----- HEADER STYLE -----
+
+header {
+    background-color: $secondery-color;
+
+    #top-line {
+        height: 10rem;
+        width: 100%;
+    }
+
+    #hero-center {
+        width: 60%;
+        margin: 5rem auto;
+        color: $primary-color;
+        text-align: center;
+
+        p {
+            font-family: $second-font;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        span {
+            -webkit-text-stroke: 0.5px $primary-color;
+            color: $secondery-color;
+        }
+
+        h1 {
+            font-family: $head-font;
+            font-size: 4rem;
+        }
+    }
+}
+
+#bottom-logo-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    img {
+        width: 100%;
+    }
+
+    .btn {
+        background-color: $secondery-color;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        padding: 1rem 1.5rem;
+        margin-bottom: 3rem;
+        transition: color 0.5s linear, background-color 0.5s linear;
+    }
+
+    .btn:hover {
+        color: $secondery-color;
+        background-color: $primary-color;
+    }
+}
+
+// ----- MAIN STYLE -----
+
+// 1. Black Section
+main section:nth-of-type(1) {
+    background-color: $secondery-color;
+    color: $primary-color;
+    padding: 2rem;
+    background-image: url("../img/map.svg");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: 90% 80%;
+}
+
+section>p {
+    font-size: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 8rem;
+    font-family: $head-font;
+}
+
+.p-small {
+    font-family: $second-font;
+    font-size: 1.3rem;
+}
+
+.p-big {
+    font-family: $head-font;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+// 2. White Saction
+main section:nth-of-type(2) {
+    width: 100%;
+    display: grid;
+    margin: 5rem auto 0 auto;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+        "img1 img2"
+        "text1 text1"
+        "img3 img4"
+        "img5 img6"
+        "text2 text2"
+        "img7 img7";
+
+    img {
+        width: 100%;
+    }
+
+    #img1 {
+        grid-area: img1;
+    }
+
+    #img2 {
+        grid-area: img2;
+    }
+
+    #text1 {
+        width: 80%;
+        margin: 2rem auto;
+        grid-area: text1;
+        font-family: $second-font;
+        font-size: 1.5rem;
+
+        h2 {
+            font-family: $head-font;
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    #img3 {
+        grid-area: img3;
+    }
+
+    #img4 {
+        grid-area: img4;
+    }
+
+    #img5 {
+        grid-area: img5;
+    }
+
+    #img6 {
+        grid-area: img6;
+    }
+
+    #text2 {
+        grid-area: text2;
+        width: 80%;
+        margin: 2rem auto;
+        font-family: $second-font;
+        font-size: 1.5rem;
+    }
+
+    #img7 {
+        grid-area: img7;
+    }
+}
+
+// 3. Black Section
+main section:nth-of-type(3) {
+    background-color: $secondery-color;
+    color: $primary-color;
+    padding: 8rem 0;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "headerTop headerTop ."
+        "img-left-zitat zitat zitat"
+        "img-bottom img-bottom img-bottom";
+
+    .header-top {
+        grid-area: headerTop;
+        margin: 4rem 1rem;
+
+        p {
+            font-family: $second-font;
+            font-size: 1.2rem;
+        }
+
+        h2 {
+            font-family: $head-font;
+            font-size: 5rem;
+        }
+    }
+
+    .zitat {
+        grid-area: zitat;
+        margin-right: 1rem;
+
+        p:nth-of-type(1) {
+            font-family: $head-font;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p:nth-of-type(2) {
+            font-family: $second-font;
+            font-size: 1.2rem;
+
+        }
+    }
+
+    .img-bottom {
+        grid-area: img-bottom;
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+    .img-left-zitat {
+        grid-area: img-left-zitat;
+        width: 100%;
+        padding: 1rem
+    }
+
+}
+
+// 4. White Section
+main section:nth-of-type(4) {
+    width: 100%;
+    display: grid;
+    margin: 10rem auto 0 auto;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "headerTop headerTop ."
+        "img-left-zitat zitat zitat"
+        "img-bottom img-bottom img-bottom";
+
+    position: relative;
+
+    #cc-logo {
+        width: 70%;
+        position: absolute;
+        top: -222px;
+        right: -122px;
+    }
+
+    .header-top {
+        grid-area: headerTop;
+        margin: 4rem 1rem;
+
+        p {
+            font-family: $second-font;
+            font-size: 1.2rem;
+        }
+
+        h2 {
+            font-family: $head-font;
+            font-size: 5rem;
+        }
+    }
+
+    .zitat {
+        grid-area: zitat;
+        margin-right: 1rem;
+
+        p:nth-of-type(1) {
+            font-family: $head-font;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p:nth-of-type(2) {
+            font-family: $second-font;
+            font-size: 1.2rem;
+
+        }
+    }
+
+    .img-bottom {
+        grid-area: img-bottom;
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+    .img-left-zitat {
+        grid-area: img-left-zitat;
+        width: 100%;
+        padding: 1rem
+    }
+}
+
+// ----- FOOTER STYLE -----
+footer {
+    background-color: $secondery-color;
+    color: $primary-color;
+    padding: 8rem 2rem;
+    font-family: $second-font;
+
+    article:nth-of-type(1) {
+        width: 70%;
+
+        p:nth-of-type(1) {
+            font-size: 1.2rem
+        }
+
+        p:nth-of-type(2) {
+            font-family: $head-font;
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            background-color: $secondery-color;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            padding: 1rem 1.5rem;
+            margin-bottom: 3rem;
+            transition: color 0.3s linear, background-color 0.3s linear;
+        }
+
+        .btn:hover {
+            color: $secondery-color;
+            background-color: $primary-color;
+        }
+    }
+
+    article:nth-of-type(2) {
+        margin-top: 4rem;
+
+        div div {
+            width: 50%;
+            margin: 2rem 0;
+
+            a {
+                text-decoration: none;
+            }
+
+            img {
+                width: 26px;
+                height: 25px;
+                margin-right: 1rem;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+    }
+
+    div:nth-of-type(2) {
+        width: 70%;
+        margin: 6rem auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 40%;
+        }
+    }
+
+}
+
+// --- DESKTOP ---
+
+// @media only screen and  (min-width: 768px) {}

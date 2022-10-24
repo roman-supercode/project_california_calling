@@ -1,0 +1,315 @@
+@font-face {
+  font-family: Lora-Medium;
+  src: url("../fonts/Lora-Medium.ttf");
+}
+@font-face {
+  font-family: Lora-Bold;
+  src: url("../fonts/Lora-Bold.ttf");
+}
+@font-face {
+  font-family: WorkSans-Medium;
+  src: url("../fonts/WorkSans-Medium.ttf");
+}
+@font-face {
+  font-family: WorkSans-Regular;
+  src: url("../fonts/WorkSans-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+header {
+  background-color: #000;
+}
+header #top-line {
+  height: 10rem;
+  width: 100%;
+}
+header #hero-center {
+  width: 60%;
+  margin: 5rem auto;
+  color: #fff;
+  text-align: center;
+}
+header #hero-center p {
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+header #hero-center span {
+  -webkit-text-stroke: 0.5px #fff;
+  color: #000;
+}
+header #hero-center h1 {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 4rem;
+}
+
+#bottom-logo-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+#bottom-logo-button img {
+  width: 100%;
+}
+#bottom-logo-button .btn {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 3rem;
+  transition: color 0.5s linear, background-color 0.5s linear;
+}
+#bottom-logo-button .btn:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+main section:nth-of-type(1) {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  background-image: url("../img/map.svg");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: 90% 80%;
+}
+
+section > p {
+  font-size: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 8rem;
+  font-family: Lora-Medium, sans-serif;
+}
+
+.p-small {
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.3rem;
+}
+
+.p-big {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+main section:nth-of-type(2) {
+  width: 100%;
+  display: grid;
+  margin: 5rem auto 0 auto;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: "img1 img2" "text1 text1" "img3 img4" "img5 img6" "text2 text2" "img7 img7";
+}
+main section:nth-of-type(2) img {
+  width: 100%;
+}
+main section:nth-of-type(2) #img1 {
+  grid-area: img1;
+}
+main section:nth-of-type(2) #img2 {
+  grid-area: img2;
+}
+main section:nth-of-type(2) #text1 {
+  width: 80%;
+  margin: 2rem auto;
+  grid-area: text1;
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.5rem;
+}
+main section:nth-of-type(2) #text1 h2 {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+}
+main section:nth-of-type(2) #img3 {
+  grid-area: img3;
+}
+main section:nth-of-type(2) #img4 {
+  grid-area: img4;
+}
+main section:nth-of-type(2) #img5 {
+  grid-area: img5;
+}
+main section:nth-of-type(2) #img6 {
+  grid-area: img6;
+}
+main section:nth-of-type(2) #text2 {
+  grid-area: text2;
+  width: 80%;
+  margin: 2rem auto;
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.5rem;
+}
+main section:nth-of-type(2) #img7 {
+  grid-area: img7;
+}
+
+main section:nth-of-type(3) {
+  background-color: #000;
+  color: #fff;
+  padding: 8rem 0;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "headerTop headerTop ." "img-left-zitat zitat zitat" "img-bottom img-bottom img-bottom";
+}
+main section:nth-of-type(3) .header-top {
+  grid-area: headerTop;
+  margin: 4rem 1rem;
+}
+main section:nth-of-type(3) .header-top p {
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.2rem;
+}
+main section:nth-of-type(3) .header-top h2 {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 5rem;
+}
+main section:nth-of-type(3) .zitat {
+  grid-area: zitat;
+  margin-right: 1rem;
+}
+main section:nth-of-type(3) .zitat p:nth-of-type(1) {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+main section:nth-of-type(3) .zitat p:nth-of-type(2) {
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.2rem;
+}
+main section:nth-of-type(3) .img-bottom {
+  grid-area: img-bottom;
+  width: 90%;
+  margin: 2rem auto;
+}
+main section:nth-of-type(3) .img-left-zitat {
+  grid-area: img-left-zitat;
+  width: 100%;
+  padding: 1rem;
+}
+
+main section:nth-of-type(4) {
+  width: 100%;
+  display: grid;
+  margin: 10rem auto 0 auto;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "headerTop headerTop ." "img-left-zitat zitat zitat" "img-bottom img-bottom img-bottom";
+  position: relative;
+}
+main section:nth-of-type(4) #cc-logo {
+  width: 70%;
+  position: absolute;
+  top: -222px;
+  right: -122px;
+}
+main section:nth-of-type(4) .header-top {
+  grid-area: headerTop;
+  margin: 4rem 1rem;
+}
+main section:nth-of-type(4) .header-top p {
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.2rem;
+}
+main section:nth-of-type(4) .header-top h2 {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 5rem;
+}
+main section:nth-of-type(4) .zitat {
+  grid-area: zitat;
+  margin-right: 1rem;
+}
+main section:nth-of-type(4) .zitat p:nth-of-type(1) {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+main section:nth-of-type(4) .zitat p:nth-of-type(2) {
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 1.2rem;
+}
+main section:nth-of-type(4) .img-bottom {
+  grid-area: img-bottom;
+  width: 90%;
+  margin: 2rem auto;
+}
+main section:nth-of-type(4) .img-left-zitat {
+  grid-area: img-left-zitat;
+  width: 100%;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 8rem 2rem;
+  font-family: WorkSans-Regular, sans-serif;
+}
+footer article:nth-of-type(1) {
+  width: 70%;
+}
+footer article:nth-of-type(1) p:nth-of-type(1) {
+  font-size: 1.2rem;
+}
+footer article:nth-of-type(1) p:nth-of-type(2) {
+  font-family: Lora-Medium, sans-serif;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+footer article:nth-of-type(1) .btn {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 3rem;
+  transition: color 0.3s linear, background-color 0.3s linear;
+}
+footer article:nth-of-type(1) .btn:hover {
+  color: #000;
+  background-color: #fff;
+}
+footer article:nth-of-type(2) {
+  margin-top: 4rem;
+}
+footer article:nth-of-type(2) div div {
+  width: 50%;
+  margin: 2rem 0;
+}
+footer article:nth-of-type(2) div div a {
+  text-decoration: none;
+}
+footer article:nth-of-type(2) div div img {
+  width: 26px;
+  height: 25px;
+  margin-right: 1rem;
+}
+footer article:nth-of-type(2) p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+footer div:nth-of-type(2) {
+  width: 70%;
+  margin: 6rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div:nth-of-type(2) img {
+  width: 40%;
+}
+
+/*# sourceMappingURL=style.css.map */
