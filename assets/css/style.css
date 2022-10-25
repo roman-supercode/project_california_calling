@@ -65,7 +65,7 @@ header #hero-center h1 {
   background-color: #000;
   border: 1px solid #fff;
   color: #fff;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   margin-bottom: 3rem;
   transition: color 0.5s linear, background-color 0.5s linear;
 }
@@ -216,6 +216,12 @@ main section:nth-of-type(4) #cc-logo {
   position: absolute;
   top: -222px;
   right: -122px;
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 main section:nth-of-type(4) .header-top {
   grid-area: headerTop;
@@ -274,7 +280,7 @@ footer article:nth-of-type(1) .btn {
   background-color: #000;
   border: 1px solid #fff;
   color: #fff;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   margin-bottom: 3rem;
   transition: color 0.3s linear, background-color 0.3s linear;
 }
@@ -310,6 +316,249 @@ footer div:nth-of-type(2) {
 }
 footer div:nth-of-type(2) img {
   width: 40%;
+}
+footer #animated-date {
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+  font-family: Lora-Medium, sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+footer #animated-date h3 {
+  animation: marquee 30s linear infinite;
+}
+footer #animated-date span {
+  -webkit-text-stroke: thin #000;
+  color: #fff;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, 0);
+  }
+  50% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header #hero-center {
+    width: 80%;
+  }
+  header #hero-center p {
+    font-size: 1.8rem;
+  }
+  header #hero-center span {
+    -webkit-text-stroke: 0.1px #fff;
+    color: #000;
+  }
+  header #hero-center h1 {
+    font-size: 8rem;
+  }
+  header #bottom-logo-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+  }
+  main section:nth-of-type(1) {
+    background-size: 30%;
+    padding: 15rem 10rem;
+  }
+  section > p {
+    width: 80%;
+    font-size: 8rem;
+    margin-bottom: 12rem;
+  }
+  .p-small {
+    font-size: 3rem;
+  }
+  .p-big {
+    font-family: Lora-Medium, sans-serif;
+    font-size: 6rem;
+    margin-bottom: 6rem;
+  }
+  main section:nth-of-type(2) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  main section:nth-of-type(2) #img1 {
+    position: absolute;
+    top: -130px;
+    right: 100px;
+  }
+  main section:nth-of-type(2) #img2 {
+    width: 18%;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+  }
+  main section:nth-of-type(2) #text1 {
+    width: 45%;
+    margin: 30% auto;
+    font-size: 2rem;
+  }
+  main section:nth-of-type(2) #text1 h2 {
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+  }
+  main section:nth-of-type(2) #img3 {
+    position: absolute;
+    top: 550px;
+    right: 0;
+  }
+  main section:nth-of-type(2) #img4 {
+    position: absolute;
+    left: 150px;
+    top: 800px;
+  }
+  main section:nth-of-type(2) #img5 {
+    position: absolute;
+    right: 180px;
+    top: 850px;
+  }
+  main section:nth-of-type(2) #img6 {
+    position: absolute;
+    left: 0;
+    bottom: 350px;
+  }
+  main section:nth-of-type(2) #text2 {
+    width: 50%;
+    margin: 30% auto;
+    font-family: WorkSans-Regular, sans-serif;
+    font-size: 2rem;
+  }
+  main section:nth-of-type(2) #img7 {
+    position: absolute;
+    right: 200px;
+    bottom: -40px;
+    z-index: 2;
+  }
+  main section:nth-of-type(2) img {
+    width: 20%;
+  }
+  main section:nth-of-type(3) {
+    padding: 10rem 10rem;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  main section:nth-of-type(3) .header-top {
+    margin: 0;
+  }
+  main section:nth-of-type(3) .header-top p {
+    font-size: 1.8rem;
+  }
+  main section:nth-of-type(3) .header-top h2 {
+    font-size: 7rem;
+  }
+  main section:nth-of-type(3) .zitat {
+    width: 50%;
+  }
+  main section:nth-of-type(3) .zitat p:nth-of-type(1) {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  main section:nth-of-type(3) .zitat p:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+  main section:nth-of-type(3) .img-bottom {
+    position: absolute;
+    width: 450px;
+    right: 35%;
+    bottom: -60px;
+  }
+  main section:nth-of-type(3) .img-left-zitat {
+    position: absolute;
+    width: 250px;
+    bottom: -20px;
+    right: 24%;
+  }
+  main section:nth-of-type(4) {
+    padding: 10rem 10rem;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  main section:nth-of-type(4) .header-top {
+    margin: 0;
+  }
+  main section:nth-of-type(4) .header-top p {
+    font-size: 1.8rem;
+  }
+  main section:nth-of-type(4) .header-top h2 {
+    font-size: 7rem;
+  }
+  main section:nth-of-type(4) .zitat {
+    width: 50%;
+  }
+  main section:nth-of-type(4) .zitat p:nth-of-type(1) {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  main section:nth-of-type(4) .zitat p:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+  main section:nth-of-type(4) .img-bottom {
+    position: absolute;
+    width: 350px;
+    right: 55%;
+    bottom: 45px;
+  }
+  main section:nth-of-type(4) .img-left-zitat {
+    position: absolute;
+    width: 550px;
+    bottom: 20px;
+    right: 30%;
+  }
+  footer {
+    padding: 8rem 10rem;
+  }
+  footer article:nth-of-type(1) {
+    width: 50%;
+  }
+  footer article:nth-of-type(1) p:nth-of-type(1) {
+    font-size: 1.6rem;
+  }
+  footer article:nth-of-type(1) p:nth-of-type(2) {
+    font-size: 2.5rem;
+  }
+  footer article:nth-of-type(2) p {
+    font-size: 1.6rem;
+  }
+  footer article:nth-of-type(2) {
+    margin-top: 4rem;
+  }
+  footer article:nth-of-type(2) div div {
+    width: 70%;
+    margin: 2rem 0;
+  }
+  footer #footer-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer div:nth-of-type(2) {
+    width: 25%;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+  footer div:nth-of-type(2) img {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

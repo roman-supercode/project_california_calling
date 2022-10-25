@@ -86,7 +86,7 @@ header {
         background-color: $secondery-color;
         border: 1px solid $primary-color;
         color: $primary-color;
-        padding: 1rem 1.5rem;
+        padding: 1rem 2rem;
         margin-bottom: 3rem;
         transition: color 0.5s linear, background-color 0.5s linear;
     }
@@ -279,6 +279,13 @@ main section:nth-of-type(4) {
         position: absolute;
         top: -222px;
         right: -122px;
+        animation: spin 20s linear infinite;
+    }
+
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
     .header-top {
@@ -350,7 +357,7 @@ footer {
             background-color: $secondery-color;
             border: 1px solid $primary-color;
             color: $primary-color;
-            padding: 1rem 1.5rem;
+            padding: 1rem 2rem;
             margin-bottom: 3rem;
             transition: color 0.3s linear, background-color 0.3s linear;
         }
@@ -397,8 +404,323 @@ footer {
         }
     }
 
+    #animated-date {
+        background-color: $primary-color;
+        color: $secondery-color;
+        font-size: 2rem;
+        font-family: $head-font;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h3 {
+            animation: marquee 30s linear infinite;
+        }
+
+        span {
+            -webkit-text-stroke: thin $secondery-color;
+            color: $primary-color;
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25% {
+            transform: translate(-100%, 0);
+        }
+
+        50% {
+            transform: translate(100%, 0);
+        }
+
+        100% {
+            transform: translate(-100%, 0);
+        }
+    }
+
 }
 
 // --- DESKTOP ---
 
-// @media only screen and  (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    // ----- HEADER STYLE -----
+    header {
+
+        #hero-center {
+            width: 80%;
+
+            p {
+                font-size: 1.8rem;
+            }
+
+            span {
+                -webkit-text-stroke: 0.1px $primary-color;
+                color: $secondery-color;
+            }
+
+            h1 {
+                font-size: 8rem;
+            }
+        }
+
+        #bottom-logo-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 5rem 10rem;
+        }
+    }
+
+    // ----- MAIN STYLE -----
+    // 1. Black Section
+    main section:nth-of-type(1) {
+        background-size: 30%;
+        padding: 15rem 10rem;
+
+    }
+
+    section>p {
+        width: 80%;
+        font-size: 8rem;
+        margin-bottom: 12rem;
+    }
+
+    .p-small {
+        font-size: 3rem;
+    }
+
+    .p-big {
+        font-family: $head-font;
+        font-size: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    // 2. White Saction
+    main section:nth-of-type(2) {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        #img1 {
+            position: absolute;
+            top: -130px;
+            right: 100px;
+        }
+
+        #img2 {
+            width: 18%;
+            position: absolute;
+            top: 100px;
+            left: 20px;
+
+        }
+
+        #text1 {
+            width: 45%;
+            margin: 30% auto;
+            font-size: 2rem;
+
+            h2 {
+                font-size: 8rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        #img3 {
+            position: absolute;
+            top: 550px;
+            right: 0;
+        }
+
+        #img4 {
+            position: absolute;
+            left: 150px;
+            top: 800px;
+        }
+
+        #img5 {
+            position: absolute;
+            right: 180px;
+            top: 850px;
+        }
+
+        #img6 {
+            position: absolute;
+            left: 0;
+            bottom: 350px;
+        }
+
+        #text2 {
+            width: 50%;
+            margin: 30% auto;
+            font-family: $second-font;
+            font-size: 2rem;
+        }
+
+        #img7 {
+            position: absolute;
+            right: 200px;
+            bottom: -40px;
+            z-index: 2;
+        }
+
+        img {
+            width: 20%;
+        }
+    }
+
+    // 3. Black Section
+    main section:nth-of-type(3) {
+        padding: 10rem 10rem;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .header-top {
+            margin: 0;
+
+            p {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 7rem;
+            }
+        }
+
+        .zitat {
+            width: 50%;
+
+            p:nth-of-type(1) {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p:nth-of-type(2) {
+                font-size: 1.5rem;
+
+            }
+        }
+
+        .img-bottom {
+            position: absolute;
+            width: 450px;
+            right: 35%;
+            bottom: -60px;
+        }
+
+        .img-left-zitat {
+            position: absolute;
+            width: 250px;
+            bottom: -20px;
+            right: 24%;
+        }
+    }
+
+    // 4. White Section
+    main section:nth-of-type(4) {
+        padding: 10rem 10rem;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .header-top {
+            margin: 0;
+
+            p {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 7rem;
+            }
+        }
+
+        .zitat {
+            width: 50%;
+
+            p:nth-of-type(1) {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p:nth-of-type(2) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .img-bottom {
+            position: absolute;
+            width: 350px;
+            right: 55%;
+            bottom: 45px;
+        }
+
+        .img-left-zitat {
+            position: absolute;
+            width: 550px;
+            bottom: 20px;
+            right: 30%;
+        }
+    }
+
+    // ----- FOOTER STYLE -----
+    footer {
+        padding: 8rem 10rem;
+
+        article:nth-of-type(1) {
+            width: 50%;
+
+            p:nth-of-type(1) {
+                font-size: 1.6rem
+            }
+
+            p:nth-of-type(2) {
+                font-size: 2.5rem;
+            }
+        }
+
+        article:nth-of-type(2) {
+            p {
+                font-size: 1.6rem;
+            }
+        }
+
+        article:nth-of-type(2) {
+            margin-top: 4rem;
+
+            div div {
+                width: 70%;
+                margin: 2rem 0;
+            }
+        }
+
+
+        #footer-flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div:nth-of-type(2) {
+            width: 25%;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+
+            img {
+                width: 50%;
+
+            }
+        }
+    }
+
+}
