@@ -213,6 +213,7 @@ main section:nth-of-type(3) {
         "img-left-zitat zitat zitat"
         "img-bottom img-bottom img-bottom";
 
+
     .header-top {
         grid-area: headerTop;
         margin: 4rem 1rem;
@@ -411,18 +412,17 @@ footer {
     #animated-date {
         background-color: $primary-color;
         color: $secondery-color;
-        font-size: 2rem;
         font-family: $head-font;
         margin-bottom: 2rem;
         transform: rotate(45deg);
         position: absolute;
         top: 40px;
-        right: -300px;
+        right: -250px;
 
 
         h3 {
             animation: marquee 10s linear infinite;
-            font-size: 6rem;
+            font-size: 3rem;
             font-family: $head-font;
             padding-inline-start: 1rem;
             top: 0;
@@ -590,14 +590,13 @@ footer {
         padding-top: 40rem;
         display: block;
 
-        article {
-            display: flex;
-            justify-content: space-between;
 
-        }
 
         .header-top {
+            width: 50%;
             margin: 0;
+            display: inline-block;
+            padding-bottom: 20rem;
 
             p {
                 font-size: 1.8rem;
@@ -609,7 +608,8 @@ footer {
         }
 
         .zitat {
-            width: 50%;
+            width: 47%;
+            display: inline-block;
 
             p:nth-of-type(1) {
                 font-size: 3rem;
@@ -642,16 +642,13 @@ footer {
         padding: 0 10rem;
         padding-top: 40rem;
         display: block;
-        // margin: 0;
 
-        article {
-            display: flex;
-            justify-content: space-between;
-        }
 
         .header-top {
+            width: 50%;
+            display: inline-block;
             margin: 0;
-            padding-bottom: 15rem;
+            padding-bottom: 20rem;
 
             p {
                 font-size: 1.8rem;
@@ -673,10 +670,11 @@ footer {
         }
 
         .zitat {
-            width: 50%;
+            width: 47%;
+            display: inline-block;
 
             p:nth-of-type(1) {
-                font-size: 2.5rem;
+                font-size: 3rem;
                 margin-bottom: 1rem;
             }
 
@@ -748,6 +746,13 @@ footer {
 
             }
         }
-    }
 
+        #animated-date {
+            right: -300px;
+
+            h3 {
+                font-size: 6rem;
+            }
+        }
+    }
 }

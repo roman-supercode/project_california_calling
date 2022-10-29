@@ -323,17 +323,16 @@ footer div:nth-of-type(2) img {
 footer #animated-date {
   background-color: #fff;
   color: #000;
-  font-size: 2rem;
   font-family: Lora-Medium, sans-serif;
   margin-bottom: 2rem;
   transform: rotate(45deg);
   position: absolute;
   top: 40px;
-  right: -300px;
+  right: -250px;
 }
 footer #animated-date h3 {
   animation: marquee 10s linear infinite;
-  font-size: 6rem;
+  font-size: 3rem;
   font-family: Lora-Medium, sans-serif;
   padding-inline-start: 1rem;
   top: 0;
@@ -459,12 +458,11 @@ footer #animated-date span {
     padding-top: 40rem;
     display: block;
   }
-  main section:nth-of-type(3) article {
-    display: flex;
-    justify-content: space-between;
-  }
   main section:nth-of-type(3) .header-top {
+    width: 50%;
     margin: 0;
+    display: inline-block;
+    padding-bottom: 20rem;
   }
   main section:nth-of-type(3) .header-top p {
     font-size: 1.8rem;
@@ -473,7 +471,8 @@ footer #animated-date span {
     font-size: 7rem;
   }
   main section:nth-of-type(3) .zitat {
-    width: 50%;
+    width: 47%;
+    display: inline-block;
   }
   main section:nth-of-type(3) .zitat p:nth-of-type(1) {
     font-size: 3rem;
@@ -500,13 +499,11 @@ footer #animated-date span {
     padding-top: 40rem;
     display: block;
   }
-  main section:nth-of-type(4) article {
-    display: flex;
-    justify-content: space-between;
-  }
   main section:nth-of-type(4) .header-top {
+    width: 50%;
+    display: inline-block;
     margin: 0;
-    padding-bottom: 15rem;
+    padding-bottom: 20rem;
   }
   main section:nth-of-type(4) .header-top p {
     font-size: 1.8rem;
@@ -523,10 +520,11 @@ footer #animated-date span {
     overflow: hidden;
   }
   main section:nth-of-type(4) .zitat {
-    width: 50%;
+    width: 47%;
+    display: inline-block;
   }
   main section:nth-of-type(4) .zitat p:nth-of-type(1) {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
   }
   main section:nth-of-type(4) .zitat p:nth-of-type(2) {
@@ -578,6 +576,12 @@ footer #animated-date span {
   }
   footer div:nth-of-type(2) img {
     width: 50%;
+  }
+  footer #animated-date {
+    right: -300px;
+  }
+  footer #animated-date h3 {
+    font-size: 6rem;
   }
 }
 
